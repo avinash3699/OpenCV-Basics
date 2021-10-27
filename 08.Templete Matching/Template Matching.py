@@ -21,7 +21,6 @@ result = cv2.matchTemplate(imageGray, templateGray, cv2.TM_CCOEFF_NORMED)
 minVal, maxVal, minLoc, maxLoc = cv2.minMaxLoc(result)
 
 startX, startY = maxLoc
-
 endX, endY = startX + template.shape[0], startY + template.shape[1]
 
 cv2.rectangle(image, (startX, startY), (endX, endY), (0, 0, 255), 9)
